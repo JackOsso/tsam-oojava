@@ -5,13 +5,13 @@ public class Salute {
 		
 	}
 	
-	double calcolaBMR(Persona persona){    //passo oggetto persona che è di tipo Persona
+	double calcolaBMR(Persona persona){    //passo oggetto persona che e' di tipo Persona
 		double MB = 0 ;
 		 
 		if(persona.sesso=='m'){
-			MB = 655 + (9.6 * persona.peso) + (1.8 * persona.altezza) + (4.7 * persona.eta);  
+			MB = 655 + (9.6 * persona.peso) + (1.8 * persona.altezza) - (4.7 * persona.eta);  
 		}else{
-			MB = 655 + (13.8 * persona.peso) + (1.8 * persona.altezza) + (4.7 * persona.eta);
+			MB = 655 + (13.8 * persona.peso) + (1.8 * persona.altezza) - (4.7 * persona.eta);
 		}
 		
 		switch(persona.attivitaFisica){
