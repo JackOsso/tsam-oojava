@@ -1,34 +1,35 @@
+package osso.giacomo.azienda;
 
 public class Azienda {
-	private String nomeAzienda;
+	private String partitaIVA;
 	private String ragioneSociale;
 	Dipendente[] dipendenti;
 	
 	Azienda(){
 		}
-	Azienda(String nomeAzienda, String ragioneSociale){
-		this.nomeAzienda = nomeAzienda;
+	Azienda(String partiaIVA, String ragioneSociale){
+		this.partitaIVA = partitaIVA;
 		this.ragioneSociale = ragioneSociale;
 		}
 	
-	public void setNomeAzienda(String nomeAzienda){
-		this.nomeAzienda = nomeAzienda;
+	public void setPartitaIVA(String partitaIVA){
+		this.partitaIVA = partitaIVA;
 	}
-	String getNomeAzienda(){
-		return this.nomeAzienda;
+	String getPartitaIVA(){
+		return partitaIVA;
 	}
 	
 	public void setRagioneSociale(String ragioneSociale){
 		this.ragioneSociale = ragioneSociale;
 	}
 	String getRagioneSociale(){
-		return this.ragioneSociale;
+		return ragioneSociale;
 	}
 	
 	
 	
-	double calcoloSommaStipendi(Dipendente[] dipendenti){
-		double sommaStipendi=0;
+	int calcoloSommaStipendi(Dipendente[] dipendenti){
+		int sommaStipendi=0;
 		
 		for (Dipendente d: dipendenti){
 			sommaStipendi += d.stipendio();

@@ -1,4 +1,4 @@
-
+package osso.giacomo.azienda;
 public class Dipendente {
     private String nome;
 	private String cognome;
@@ -43,6 +43,12 @@ public class Dipendente {
 	//calcolo stipendio
 	public double stipendio() {
 		return contratto.getStipendioBase() + ((contratto.getStipendioBase() * 0.005) * anzianita);
+	}
+	public Contratto getContratto() {
+		return contratto;
+	}
+	public void setContratto(Contratto contratto) {
+		this.contratto = contratto;
 	}
 	
 	

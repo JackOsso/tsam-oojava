@@ -1,3 +1,4 @@
+package osso.giacomo.azienda;
 
 public class Contratto {
 	private int stipendioBase;
