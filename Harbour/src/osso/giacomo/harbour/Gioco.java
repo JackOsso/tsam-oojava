@@ -2,9 +2,10 @@ package osso.giacomo.harbour;
 
 public class Gioco {
 	
+	private PortoNavale P = new PortoNavale();
 	
 	
-	
+	/*
 	public Gioco(){
 			
 			PortoNavale P = new PortoNavale();
@@ -32,8 +33,13 @@ public class Gioco {
 			
 		
 		}
+	*/
 	
-	public void attacco(Invasore[] invasori, PortoNavale P){
+	public void attacco(Invasore[] invasori){
+		
+		P.setDimensione(2000);
+		
+		
 		System.out.println("Inizio Gioco");
 		
 		int nAttacchi =0;
@@ -52,13 +58,15 @@ public class Gioco {
 					System.out.println("Dimensione porto : " + P.getDimensione());
 					nAttacchi +=1;
 					
-				}else {
-					System.out.println("Il porto è stato attaccato: " + nAttacchi ) ;
-					
-					System.out.println("Il porto è stato distrutto");
 				}
 			}
 		}while(P.isAlive());
+		
+		
+		System.out.println("Il porto e' stato attaccato: " + nAttacchi ) ;
+			
+		System.out.println("Il porto e'  stato distrutto");
+		
 		
 		System.out.println("Fine Gioco");
 		
